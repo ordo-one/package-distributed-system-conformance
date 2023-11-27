@@ -25,6 +25,8 @@ public extension BinaryFloatingPoint {
         }
         self = buffer.loadUnaligned(as: Self.self)
     }
+
+    func _releaseBuffer() {}
 }
 
 extension Float: Transferable & TriviallyCopyable {}

@@ -25,6 +25,8 @@ public extension BinaryInteger {
         }
         self = buffer.loadUnaligned(as: Self.self)
     }
+
+    func _releaseBuffer() {}
 }
 
 extension Int: Transferable & TriviallyCopyable {}

@@ -44,6 +44,8 @@ public protocol Deserializable {
     /// **Important:** The passed raw buffer pointer can be copied by `Self`
     /// - Parameter from: the buffer to read data from
     init(fromSerializedBuffer buffer: UnsafeRetainedRawBuffer) throws
+
+    func _releaseBuffer()
 }
 
 /// Default implementations.
