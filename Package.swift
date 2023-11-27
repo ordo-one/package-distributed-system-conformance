@@ -40,5 +40,8 @@ let package = Package(
                 .product(name: "Helpers", package: "package-concurrency-helpers"),
             ]
         ),
+        .testTarget(
+            name: "DistributedSystemConformanceTests"
+        )
     ]
 )
