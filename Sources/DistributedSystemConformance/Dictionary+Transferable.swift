@@ -72,6 +72,8 @@ public extension Dictionary where Key: Deserializable, Value: Deserializable {
             self[key] = value
         }
     }
+
+    func _releaseBuffer() {}
 }
 
 extension Dictionary: Serializable where Key: Serializable, Value: Serializable {}

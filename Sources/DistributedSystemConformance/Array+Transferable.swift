@@ -87,6 +87,8 @@ public extension Array where Element: Deserializable {
             }
         }
     }
+
+    func _releaseBuffer() {}
 }
 
 extension Array: Serializable where Element: Serializable {}
