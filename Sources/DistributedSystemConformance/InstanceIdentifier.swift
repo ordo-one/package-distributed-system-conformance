@@ -15,7 +15,7 @@ public struct InstanceIdentifier: Hashable, Codable, CustomStringConvertible {
         String(describing: rawValue)
     }
 
-    public init(_ rawValue: FrostflakeIdentifier = Frostflake.generate()) {
+    public init(_ rawValue: FrostflakeIdentifier = FrostflakeGenerator.generate()) {
         self.rawValue = rawValue
     }
 }

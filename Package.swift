@@ -6,7 +6,6 @@ import PackageDescription
 
 let internalDependencies: [String: Range<Version>] = [
     "package-concurrency-helpers": .upToNextMajor(from: "2.0.0"),
-    "package-frostflake": .upToNextMajor(from: "4.0.0"),
 ]
 
 func makeDependencies() -> [Package.Dependency] {
@@ -36,12 +35,16 @@ let package = Package(
         .target(
             name: "DistributedSystemConformance",
             dependencies: [
-                .product(name: "Frostflake", package: "package-frostflake"),
+                "Frostflake",
                 .product(name: "Helpers", package: "package-concurrency-helpers"),
             ]
         ),
         .testTarget(
             name: "DistributedSystemConformanceTests"
+        ),
+        .binaryTarget(
+            name: "Frostflake",
+            path: "../Frostflake.xcframework"
         )
     ]
 )
