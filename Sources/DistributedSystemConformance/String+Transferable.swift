@@ -25,8 +25,6 @@ public extension String {
             return buffer.count
         }
     }
-
-    func _releaseBuffer() {}
 }
 
 extension String: Transferable {}
