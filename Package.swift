@@ -21,13 +21,13 @@ func makeDependencies() -> [Package.Dependency] {
 let package = Package(
     name: "package-distributed-system-conformance",
     platforms: [
-        .macOS(.v13),
+        .macOS(.v14),
         .iOS(.v16),
     ],
     products: [
         .library(
             name: "DistributedSystemConformance",
-            type: .dynamic,
+            // type: .dynamic,
             targets: ["DistributedSystemConformance"]
         ),
     ],
