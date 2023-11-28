@@ -21,7 +21,7 @@ func makeDependencies() -> [Package.Dependency] {
 let package = Package(
     name: "package-distributed-system-conformance",
     platforms: [
-        .macOS(.v14),
+        .macOS(.v13),
         .iOS(.v16),
     ],
     products: [
