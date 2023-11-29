@@ -6,7 +6,7 @@ import PackageDescription
 
 let internalDependencies: [String: Range<Version>] = [
     "package-concurrency-helpers": .upToNextMajor(from: "2.0.0"),
-    "package-frostflake": .upToNextMajor(from: "4.0.0"),
+    "package-frostflake": .upToNextMajor(from: "5.0.0"),
 ]
 
 func makeDependencies() -> [Package.Dependency] {
